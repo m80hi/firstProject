@@ -149,6 +149,11 @@ function remove(event) {
 
   // Remove the row from the table
   tbody.removeChild(row);
+
+  let rows = tbody.rows;
+  for (let i = 0; i < rows.length; i++) {
+      rows[i].cells[0].innerText = i + 1; // Update the row number
+  }
 }
 
 
