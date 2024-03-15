@@ -170,6 +170,10 @@ i:hover{
  .div-center{
     margin: 0 400px;
  }
+
+ .required{
+    color: red;
+ }
 /* 
  #heading-alert{
     color:red;
