@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <title>salarProject</title>
+</head>
+
+<body>
+    
+    <div class="div-search">
+        <h2 class="div-add-h2">
+            جست و جو
+
+            
+        </h2>
+        <div class="div-add-fild">
+            <!-- <h3 id="heading-alert">fsfsd</h3> -->
+
+                <form>
+                    
+                    <label for="fname">نام</label>
+                    <input type="text" id="fname-search" name="firstname" placeholder="لطفا نام خود را وارد کنید..">
+                
+                    <label for="lname">نام خانوادگی</label>
+                    <input type="text" id="lname-search" name="lastname" placeholder="لطفا نام خانوادگی خود را وارد کنید">
+
+                    <label for="idCard">کد ملی</label>
+                    <input type="text" id="idCard-search" name="idCard" placeholder="لطفا کد ملی خود را وارد کنید">
+
+                    
+                  
+                  </form>
+
+                  <button class="add-form float-left" onclick="search()">جست و جو</button>
+                  
+                 
+        </div>
+
+
+    </div>
+    
+    <div class="div-info">
+        <button class="add-form margin-right" onclick="btnAdd1()">add</button>
+        <table class="table-info">
+            <thead>
+                <tr>
+                    <td>شماره ردیف</td>
+                    <td>نام</td>
+                    <td>نام خانوادگی</td>
+                    <td>کد ملی</td>
+                    <td>عملیات</td>
+                   
+                </tr>
+            </thead>
+
+            <tbody id="tbody-add">
+
+                <tr>
+                    <td>1</td>
+                    <td>mahdi</td>
+                    <td>ghasemi</td>
+                    <td>123</td>
+                   
+                    <td>
+                        <i class="fa fa-eye operator" onclick="see(event)"> مشاهده</i>
+                        <i class="fa fa-pen operator" onclick="edit(event)"> ویرایش</i>
+                        <i class="fa fa-recycle operator" onclick="remove(event)"> حذف</i>
+                        <i class="fa fa-map-marker-alt operator"> نقشه</i>
+                        <i class="fa fa-user-alt operator"> لاگین</i>
+    
+    
+    
+    
+    
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>morteza</td>
+                    <td>motamedi </td>
+                    <td>321</td>
+                   
+                    <td>
+                        <i class="fa fa-eye operator" onclick="see(event)"> مشاهده</i>
+                        <i class="fa fa-pen operator" onclick="edit(event)"> ویرایش</i>
+                        <i class="fa fa-recycle operator" onclick="remove(event)"> حذف</i>
+                        <i class="fa fa-map-marker-alt operator"> نقشه</i>
+                        <i class="fa fa-user-alt operator"> لاگین</i>
+    
+    
+    
+    
+    
+                    </td>
+                    
+                </tr>
+            </tbody>
+
+       
+
+
+            <!-- <tr>
+                <td>نام</td>
+                <td>نام خانوادگی</td>
+                <td>شماره موبایل</td>
+                <td>ایمیل</td>
+                <td>رمز عبور</td>
+                <td>منو ها</td>
+            </tr>
+
+            <tr>
+                <td>نام</td>
+                <td>نام خانوادگی</td>
+                <td>شماره موبایل</td>
+                <td>ایمیل</td>
+                <td>رمز عبور</td>
+                <td>منو ها</td>
+            </tr>
+
+            <tr>
+                <td>نام</td>
+                <td>نام خانوادگی</td>
+                <td>شماره موبایل</td>
+                <td>ایمیل</td>
+                <td>رمز عبور</td>
+                <td>منو ها</td>
+            </tr>
+
+            <tr>
+                <td>نام</td>
+                <td>نام خانوادگی</td>
+                <td>شماره موبایل</td>
+                <td>ایمیل</td>
+                <td>رمز عبور</td>
+                <td>منو ها</td>
+            </tr>
+
+
+            <tr>
+                <td>نام</td>
+                <td>نام خانوادگی</td>
+                <td>شماره موبایل</td>
+                <td>ایمیل</td>
+                <td>رمز عبور</td>
+                <td>منو ها</td>
+            </tr>
+
+
+            <tr>
+                <td>نام</td>
+                <td>نام خانوادگی</td>
+                <td>شماره موبایل</td>
+                <td>ایمیل</td>
+                <td>رمز عبور</td>
+                <td>منو ها</td>
+            </tr>
+
+
+            <tr>
+                <td>نام</td>
+                <td>نام خانوادگی</td>
+                <td>شماره موبایل</td>
+                <td>ایمیل</td>
+                <td>رمز عبور</td>
+                <td>منو ها</td>
+            </tr> -->
+        </table>
+    </div>
+
+    <div id="show-add">
+       
+
+        <div class="div-add">
+            <h2 class="div-add-h2">
+                افزودن
+    
+                <i class="fa fa-window-close close-form2" onclick="closeForm()" ></i>
+            </h2>
+            <div class="div-add-fild">
+                <!-- <h3 id="heading-alert">fsfsd</h3> -->
+    
+                    <form>
+                        
+                        <label for="fname">نام</label>
+                        <input type="text" id="fname" name="firstname" placeholder="لطفا نام خود را وارد کنید..">
+                    
+                        <label for="lname">نام خانوادگی</label>
+                        <input type="text" id="lname" name="lastname" placeholder="لطفا نام خانوادگی خود را وارد کنید">
+    
+                        <label for="idCard">کد ملی</label>
+                        <input type="text" id="idCard" name="idCard" placeholder="لطفا کد ملی خود را وارد کنید">
+                    
+                        
+    
+                      
+                      </form>
+
+
+                      <button class="add-form" onclick="btnAdd2()">افزودن</button>
+    
+                      <button onclick="closeForm()" class="close-form1">بستن</button>
+    
+                     
+            </div>
+    
+    
+        </div>
+       
+    
+       
+    </div>
+
+
+
+    
+
+
+    
+ 
+
+
+
+
+
+    <script src="main.js">
+
+
+
+    </script>
+</body>
+
+</html>
