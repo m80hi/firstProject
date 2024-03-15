@@ -37,12 +37,12 @@ function btnAdd2(){
       return;
     }
 
-    if(lname.lname==""){
+    if(lname.value==""){
         alert("لطفا نام خانوادگی خود را وارد کنید")
         return;
     }
 
-    if(idCard.idCard==""){
+    if(idCard.value==""){
         alert("لطفا شماره کارت ملی خود را وارد کنید")
         return;
     }
