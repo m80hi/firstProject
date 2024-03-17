@@ -1,8 +1,6 @@
 function btnAdd1(){
   let showAdd=  document.getElementById("show-add")
   showAdd.style.display="block"
-// alert("hello")
-  
 }
 
 function closeForm(){
@@ -112,7 +110,6 @@ function see(event){
   idCard.value=formattedText[3]
   idCard.readOnly=true
 
-  // let arr = ["first name","last name","idCard"]
 }
 
 function edit(event){
